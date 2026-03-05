@@ -1,26 +1,40 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import "bootstrap-icons/font/bootstrap-icons";
+@import 'remixicon/fonts/remixicon.css';
+
+:root{
+  --prima: #F3E3D0;
+  --prim-light: #D2C4B4;
+  --second: #AACDDC;
+  --white: #fff;
+  --black: #000;
+  --gradient: linear-gradient(to right, #f2fcfe, #1c92d2);
+
+  --golos-text: 'Golos Text', sans-serif;
+  --playfair-display: 'Playfair Display', serif;
+  --dm-sans: 'DM Sans', sans-serif;
+  --Lufga: var(--font-lufga);
+
+  --transition-regular: 0.3s;
+  --transition-slow: 0.6s;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.Playfair-display{
+  font-family: var(--playfair-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.DM-sans{
+  font-family: var(--dm-sans);
+}
+
+.Lufga {
+  font-family: var(--Lufga);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F3E3D0 ;
+  overflow-x: hidden !important;
 }
