@@ -14,10 +14,11 @@ export default function MiddleNav() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-3xl lg:text-5xl font-bold Playfair-display text-black"
+          className="text-3xl lg:text-3xl font-bold Playfair-display text-black"
         >
-          Wave<span className="text-[var(--second)]">Care</span>
+          Poção<span className="text-gradient">Magica</span>
         </Link>
+
 
        { /* Search box */}
                 <div className="relative mx-0 ms-6 flex flex-1 flex-col rounded-lg bg-white lg:max-w-2xl">
@@ -31,7 +32,7 @@ export default function MiddleNav() {
                         />
 
                         <button className="cursor-pointer px-3 text-2xl">
-                            <i className="bi bi-search"></i>
+                            <i className="bi bi-search text-black"></i>
                         </button>
                     </div>
                 </div>
@@ -39,15 +40,15 @@ export default function MiddleNav() {
         {/* Contato */}
                 <div className='flex items-center gap-2 ml-6'>
                     <Image
-                        src='/wave.png'
+                        src='/poção.png'
                         alt='Suporte'
                         width={40}
                         height={40}
                     />
 
                     <div className='flex flex-col'>
-                        <h2 className='text-xs font-semibold'>SUPORTE</h2>
-                        <h1 className='font-semibold'>12 9999-4444</h1>
+                        <h2 className='dm-sans text-black ps-2 font-semibold'>SUPORTE</h2>
+                        <h1 className='dm-sans text-black'>12 9999-4444</h1>
                     </div>
                 </div>
                 

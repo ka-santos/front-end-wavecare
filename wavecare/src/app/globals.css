@@ -6,12 +6,12 @@
 @tailwind utilities;
 
 :root{
-  --prima: #F3E3D0;
-  --prim-light: #D2C4B4;
-  --second: #85bdd5;
+  --prima: #cab3e9;
+  --prim-light: #cccccc;
+  --second: #9975c9;
   --white: #fff;
-  --black: #000;
-  --gradient: linear-gradient(to right, #f2fcfe, #1c92d2);
+  --black: #1b1b1b;
+  --gradient:  linear-gradient(180deg, #3c008a 0.000%, #4e03a0 25.000%, #6223b6 50.000%, #7745cc 75.000%, #8c68e0 100.000%);
 
   --golos-text: 'Golos Text', sans-serif;
   --playfair-display: 'Playfair Display', serif;
@@ -37,4 +37,35 @@
 body {
   background-color: #F3E3D0 ;
   overflow-x: hidden !important;
+}
+
+html, body {
+  width: 100%;
+  overflow: hidden;
+}
+
+body{
+  background-color: #fffaf3;
+  font-family: var(--dm-sans);
+  color: var(--prim-light);
+}
+
+/*reutilizaveis*/
+
+.font-playfair{
+  font-family: var(--playfair-display);
+}
+
+.font-dm{
+  font-family: var(--dm-sans);
+}
+
+.font-lufga{
+  font-family: var(--Lufga);
+}
+
+.text-gradient {
+  background: linear-gradient(180deg, #3c008a 0.000%, #4e03a0 25.000%, #6223b6 50.000%, #7745cc 75.000%, #8c68e0 100.000%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
