@@ -17,8 +17,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "WaveCare",
-  description: "Cuidados com o seu cabelo",
+  title: "Poção Magica",
+  description: "Poções magicas",
 };
 
 const lufga = localFont({

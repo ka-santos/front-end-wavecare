@@ -25,7 +25,7 @@ export default function MiddleNav() {
                     <div className="flex items-center">
                         <input 
                         type="text"
-                        placeholder="Busque por um produto"
+                        placeholder="Busque por uma poção..."
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         className="flex-1 rounded-l-lg px-4 py-4 outline-none"
@@ -47,7 +47,7 @@ export default function MiddleNav() {
                     />
 
                     <div className='flex flex-col'>
-                        <h2 className='dm-sans text-black ps-2 font-semibold'>SUPORTE</h2>
+                        <h2 className='dm-sans text-black ps-2 font-semibold'>Alquimista</h2>
                         <h1 className='dm-sans text-black'>12 9999-4444</h1>
                     </div>
                 </div>

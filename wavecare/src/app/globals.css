@@ -7,9 +7,9 @@
 
 :root{
   --prima: #cab3e9;
-  --prim-light: #cccccc;
+  --prim-light: #f3edf9;
   --second: #9975c9;
-  --white: #fff;
+  --white: #ffffff;
   --black: #1b1b1b;
   --gradient:  linear-gradient(180deg, #3c008a 0.000%, #4e03a0 25.000%, #6223b6 50.000%, #7745cc 75.000%, #8c68e0 100.000%);
 
@@ -41,7 +41,7 @@ body {
 
 html, body {
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body{
@@ -68,4 +68,137 @@ body{
   background: linear-gradient(180deg, #3c008a 0.000%, #4e03a0 25.000%, #6223b6 50.000%, #7745cc 75.000%, #8c68e0 100.000%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* === COMPONENTES NAV === */
+ 
+@layer components {
+  .nav-fixed-shadow {
+    box-shadow: 0 4px 24px rgba(20, 33, 61, 0.13);
+  }
+ 
+  .search-ring:focus-within {
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.18);
+  }
+}
+
+ @layer components {
+
+  .GolosText {
+    font-family: var(--GolosText);
+  }
+
+  .hero-shape3 {
+    position: absolute;
+    top: -40px;
+    left: -60px;
+    width: 280px !important;
+    height: auto !important;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-shape4 {
+    position: absolute;
+    bottom: -30px;
+    right: -50px;
+    width: 220px !important;
+    height: auto !important;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-content {
+    animation: heroFadeIn 0.7s ease both;
+  }
+
+  @keyframes heroFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.582), #ffffff00);
+  transition: none;
+  z-index: -1;
+}
+
+.btn:hover:after {
+  left: 100%;
+  transition: 0.8s;
+}
+
+/* Trending Product */
+
+.product-icon {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.product-icon:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.452), #ffffff00);
+  transition: none;
+  z-index: -1;
+}
+
+.product-icon:hover:after {
+  left: 100%;
+  transition: 0.6s;
+}
+
+.product-btn {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+  transition: var(--transition-regular);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image img {
+  transition: var(--transition-regular);
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.1);
 }
